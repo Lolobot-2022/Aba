@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 
+
+/*FORMAT DESKTOP*/
+
 body {
-  background: white;
+  background: #0D1117 ;
   margin: 0;
   transition: 0.2s linear;
   font-family: 'Dosis', sasn-serif;
   color: #333;
+  width: 100%;
+  height:100vh;
 }
 
 .toggle {
@@ -17,9 +22,8 @@ body {
   display: none;
 }
 .label {
-  height: 26px;
-  width: 50px;
-  background: rgb(182,182,182);
+  height: 17px;
+  width: 40px;
   padding: 5px 8px;
   border-radius: 50px;
   cursor:pointer;
@@ -28,35 +32,70 @@ body {
   justify-content: space-between;
   position: relative;
   transform: scale(1.2);
-  box-shadow: 2px 1px 1px #333;
+  box-shadow: 2px 1px 1px rgba(70, 70, 109, 0);
+  background: rgba(136, 136, 136, 0);
+  border: 2px solid #333 ;
 }
 .label .ball {
-  background: #eee;
+  background: rgb(107, 107, 205);
   border-radius: 50%;
-  height: 26px;
-  width: 26px;
+  height: 17px;
+  width: 17px;
   position: absolute;
   top: 5px;
-  left: 6px;
-  transform: translateX(0px);
-  transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
-}
-.checkbox:checked + .label .ball {
+  left: 3px;
   transform: translateX(29px);
 }
+.checkbox:checked + .label .ball {
+  transform: translateX(3px);
+  transition: transform 0.4s cubic-bezier(.45, -1.12, .7, 1.78);
+}
 .fa-moon {
-  color: #333;
+  color: whitesmoke;
+  width: 17px;
+  height: 17px;
 }
 
- /* DARK MODE */
- .dark {
-   background: #0D1117;
+
+ /* LIGHT MODE */
+ .light {
+   background:white ;
  }
  
- .dark .label {
-   box-shadow: 2px 1px 1px #09FBBA;
-   background: #888;
+ .light .label {
+   box-shadow: 2px 1px 1px rgba(51, 51, 51, 0);
+   background: rgba(182, 182, 182, 0);
+   border: 2px solid #0D1117 ;
  }
- .dark .ball {
-   background: #09FBBA;
+ .light .ball {
+  background: #0D1117;
  }
+
+
+ /*Pour le translater en creole haitien */
+ .language { /*la class qui contient le bi-translate */
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+.bi-translate {
+  height: 20px;
+  width: 20px;
+  color:white;
+  padding: 5px 8px;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transform: scale(1.2);
+  font-size: 30px;
+}
+
+.light .bi-translate{ /*Pour changer de mode*/
+  color:#0D1117;
+} 
+
+
+

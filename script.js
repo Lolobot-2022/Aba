@@ -1,5 +1,5 @@
-const darkMode = document.getElementById('dark-mode');
+const lightMode = document.getElementById('light-mode');
 
-darkMode.addEventListener('change', () => {
-  document.body.classList.toggle('dark');
+lightMode.addEventListener('change', () => {
+  document.body.classList.toggle('light');
 })
