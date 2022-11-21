@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "counterup": "^1.0.2",
+    "jquery": "^3.6.1",
     "nodemon": "^2.0.20",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "waypoints": "^4.0.1"
   }
 }

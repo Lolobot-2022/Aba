@@ -98,4 +98,44 @@ body {
 } 
 
 
+/*Pour afficher le nombre total de personnes tuees en 2022 */
+.counter{
+  padding: 80px 0;
+  width:100%;
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+}
+.num{
+  font-size: 70px;
+  margin:20px 0;
+}
+.box{
+  flex:1;
+  text-align: center;
+  padding: 20px;
+  color:#fff;
+  text-transform: uppercase;
+  border:2px solid #333;
+  width: 300px;
+  margin-left: 50%;
+  
+}
+
+.box .bi-people{
+  font-size: 120px;
+  color:#333;
+}
+
+
+.light .box{
+  border: 2px solid #0D1117;
+}
+
+.light .num{
+  color:#0D1117;
+}
+.light .alpha{ 
+  color: #0D1117;
+}
 
