@@ -10,11 +10,14 @@
   <link href="./style.css" rel="stylesheet">
   <!-- <link href="./assets/bootstrap.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     
 </head>
+
 <body>
 
+ <!..POUR le MODE LIGHT..>
   <div class="toggle">
     <input type="checkbox" class="checkbox" id="light-mode" />
     <label for="light-mode" class="label">
@@ -25,7 +28,7 @@
   </div>
 
 
-  
+  <!..POUR CHANGER DE LANGUE FRANCAIS-CREOLE..>
   <div class="language">
     
     <a href="./creole.html">
@@ -39,11 +42,15 @@
     
   </div>
 
-   <div class="titre">
-    <h1 class="grand">Statistiques sur l'insécurité et la corruption en Haiti</h1>
-   </div>
+  
+  <!..POUR LES ELEMENTS DE LA GRID ..>
    <div class="counter">
-    <div class="box">
+
+    <div class="box header">
+      <h1 class="grand">Statistiques sur l'insécurité et la corruption en Haiti</h1>
+    </div>
+
+    <div class="box main">
       <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
         <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
       </svg>
@@ -51,7 +58,7 @@
       <div class="alpha">Personnes tuées en 2022</div>
     </div>
 
-    <div class="box">
+    <div class="box mainOne">
       <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
         <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
       </svg>
@@ -59,13 +66,66 @@
       <div class="alpha">Personnes kidnapées en 2022</div>
     </div>
 
-   </div>
+
+    <div class="box info">
+      <h2 id="objectif">"Cette année, l'insécurité a augmenté drastiquement. La majorité de nos élus sont corrompus" </h2>
+    </div>
+
+    <div class="box graphique">
+      <div class="right">
+        <span class="g0" onclick="show('graph0');">Vue d'ensemble</span>
+        <span class="g1" onclick="show('graph1');">Ce Mois</span>
+        <span class="g2" onclick="show('graph2');">3 Mois</span>
+        <span class="g3" onclick="show('graph3');">6 Mois</span>
+        <span class="g4" onclick="show('graph4');">1 ans</span>
+        <span class="g5" onclick="show('graph4');">5 ans</span>
+     </div>
+   <br>
+     
+      <div id="graph0">
+        <div class="chart">
+          <canvas id="myChart" aria-label="chart" role="img"></canvas>
+         </div>
+
+         <div class="chart">
+          <canvas id="myChartOne" aria-label="chart" role="img"></canvas>
+         </div>
+      </div>
+
+      <div id="graph1">
+        
+     </div>
+   
+     <div id="graph2" style="display: none;"></div>
+     
+   <div id="graph3" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+     
+   <div id="graph4" style="display: none;">lodfgddffffffffffffffffff</div>
+
+   <div id="graph1">
+      
+  </div>
+
+
+
+    </div>
+
+    <br><br>
+
+
+   </div> 
+
+
+   
+
+     
 
 
 
     
   <script src="./assets/jquery.min.js" type="text/javascript" ></script>
   <script src="./assets/bootstrap.js" type="text/javascript" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./script.js" type="text/javascript" ></script>
 </body>
 

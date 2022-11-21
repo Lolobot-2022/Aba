@@ -4,7 +4,7 @@
 /*FORMAT DESKTOP*/
 
 body {
-  background: #0D1117 ;
+  background: linear-gradient(to left, rgb(19, 19, 123),rgb(5, 5, 45),#0D1117) ;
   margin: 0;
   transition: 0.2s linear;
   font-family: 'Dosis', sasn-serif;
@@ -59,7 +59,7 @@ body {
 
  /* LIGHT MODE */
  .light {
-   background:white ;
+   background:linear-gradient(to left,white,whitesmoke, rgba(249, 152, 67, 0.566), rgb(249, 152,67) );
  }
  
  .light .label {
@@ -68,7 +68,7 @@ body {
    border: 2px solid #0D1117 ;
  }
  .light .ball {
-  background: #0D1117;
+  background: rgb(249, 152, 67);
  }
 
 
@@ -97,45 +97,68 @@ body {
   color:#0D1117;
 } 
 
-.titre{
-  width:60%;
-}
+
 .grand{
-  font-size: 50px;
+  font-size: 30px;
   Color:white;
   font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,
   "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-weight: bold;
-  margin-top:10%;
-  margin-left: 80px;
+ 
 }
 
 /*Pour afficher le nombre total de personnes tuees en 2022 */
 .counter{
-  padding: 80px 0;
-  width:100%; 
-  position: absolute;
-  top:50%;
-  transform:translateY(-50%);
   display: grid;
-  grid-template: auto/auto auto;
+  gap: 20px;
+  grid-template-areas: 
+    "header header header header"
+    "main main mainOne mainOne"
+    "info info info info"
+    "graphique graphique graphique graphique";
   justify-items: center;
 }
+.header{
+  grid-area: header;
+  margin-top: 100px;
+  padding: 10px;
+  width:50%;
+  text-align: center;
+}
+.info{
+  grid-area: info;
+  padding: 10px;
+  width: 50%;
+}
+.main{
+ grid-area:main ;
+ text-align: center; 
+ border:2px solid #333; 
+ width: 500px;  
+ margin-left: 10px;  
+ background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496)); 
+ padding: 20px;
+
+}
+.mainOne{
+  grid-area:mainOne ;
+  text-align: center; 
+  border:2px solid #333; 
+  width: 500px;  
+  background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496)); 
+  padding: 20px;
+  
+   
+ }
+
 .num{
   font-size: 70px;
   margin:20px 0;
 }
 .box{
   flex:1;
-  text-align: center;
-  padding: 20px;
   color:#fff;
   text-transform: uppercase;
-  border:2px solid #333;
-  width: 500px; 
-  margin-left: 10px; 
-  background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496));
-  
 }
 
 .box .bi-people{
@@ -145,41 +168,179 @@ body {
 
 
 .light .box{
-  border: 2px solid #0D1117;
+  border: 2px solid rgba(249, 152, 67, 0);
 }
+.light .header{
+  border:none;
+  color: #0D1117;
+}
+.light .grand{
+  color: rgb(249,152,67);
+}
+.light .info{
+  border:none;
+  color: #0D1117;
+}
+
+
 
 .light .num{
   color:#0D1117;
 }
+.alpha{
+  color:bisque;
+}
 .light .alpha{ 
-  color: #0D1117;
+  color: rgb(255, 180, 99);
 }
 
-.light .grand{
-  color: #0D1117;
+
+#objectif{
+  font-size: 25px;
+  Color:whitesmoke;
+  font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,
+  "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: bold;
+  text-align: center;
+
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
+.light #objectif{
+  border: none;
+  color: grey;
+}
+
+
+/*POUR LES GRAPHIQUES*/
+
+.graphique{
+ grid-area:graphique ;
+ text-align: center; 
+ border:2px solid #333; 
+ width: 80%;  
+ height: 500px;
+ background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496)); 
+ padding: 20px;
+}
+.right{
+  display: flex;
+  justify-content:end;
+  margin-right: 5px;
+  cursor: pointer;
+  padding: 20px;
+}
+.g0{
+  padding: 5px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  background: #0d111768;
+  width: 120px;
+  margin-right: 10px;
+}
+.g1{
+  padding: 5px;
+  border: 2px solid rgb(249,152,67);
+  border-radius: 20px;
+  background: rgb(249, 152, 67);
+  width: 90px;
+  margin-right: 10px;
+}
+.g2{
+  padding: 5px;
+  border: 2px solid rgb(249,152,67);
+  border-radius: 20px;
+  background: rgb(249, 152, 67);
+  width: 90px;
+  margin-right: 10px;
+}
+.g3{
+  padding: 5px;
+  border: 2px solid rgb(249,152,67);
+  border-radius: 20px;
+  background: rgb(249, 152, 67);
+  width: 90px;
+  margin-right: 10px;
+}
+.g4{
+  padding: 5px;
+  border: 2px solid rgb(249,152,67);
+  border-radius: 20px;
+  background: rgb(249, 152, 67);
+  width: 90px;
+  margin-right: 10px;
+}
+.g5{
+  padding: 5px;
+  border: 2px solid rgb(249,152,67);
+  border-radius: 20px;
+  background: rgb(249, 152, 67);
+  width: 90px;
+  margin-right: 10px;
+}
+#graph0{
+  display: flex;
+}
+.chart{
+  width:50%;
+  height: 600px;
+  padding:30px;
+}
+
 
 
 /*Format Mobile */
 @media only screen and (max-width: 767px) {
   .counter{
-    top: 40%;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+      "header header header header"
+      "main main main main"
+      "mainOne mainOne mainOne mainOne"
+      "info info info info"
+      "graphique graphique graphique graphique";
+    justify-items: center;
   }
+  .header{
+    grid-area: header;
+    margin-top: 30px;
+    padding: 10px;
+    width:50%;
+    text-align: center;
+  }
+  .info{
+    grid-area: info;
+    padding: 10px;
+    width: 50%;
+  }
+  .main{
+   grid-area:main ;
+   text-align: center; 
+   border:2px solid #333; 
+   width: 80%;  
+   background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496)); 
+   padding: 20px;
+  
+  }
+  .mainOne{
+    grid-area:mainOne ;
+    text-align: center; 
+    border:2px solid #333; 
+    width: 80%;  
+    background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496)); 
+    padding: 20px;
+    
+     
+   }
   .num{
     font-size: 40px;
     margin:10px 0;
   }
   .box{
     flex:1;
-    text-align: center;
-    padding: 10px;
     color:#fff;
     text-transform: uppercase;
-    border:2px solid #333;
-    width: 100px; 
-    margin-left: 5px; 
-    background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496));
-    
   }
 
   .box .bi-people{
@@ -188,11 +349,99 @@ body {
   }
 
   .grand{
-    font-size: 20px;
+    font-size: 10px;
     margin-top: 25%;
-    margin-left: 35px;
+    color:bisque;
+    
   }
-  .titre{
-    width:90%;
-  }
+
+  /*POUR LES GRAPHIQUES*/
+
+.graphique{
+  grid-area:graphique ;
+  text-align: center; 
+  border:2px solid #333; 
+  width: 80%;  
+  height: 400px;
+  background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496)); 
+  padding: 20px;
+ }
+ .right{
+   display: flex;
+   justify-content:center;
+   margin-right: 5px;
+   cursor: pointer;
+   padding: 5px;
+ }
+ .g0{
+   padding: 1px;
+   border: 2px solid #333;
+   border-radius: 3px;
+   background: #0d111768;
+   width: 45px;
+   margin-right: 2px;
+   font-size: 8px;
+   height: 20px;
+ }
+ .g1{
+   padding: 1px;
+   border: 2px solid rgb(249,152,67);
+   border-radius: 3px;
+   background: rgb(249, 152, 67);
+   width: 45px;
+   margin-right: 2px;
+   font-size: 8px;
+   height: 12px;
+ }
+ .g2{
+   padding: 1px;
+   border: 2px solid rgb(249,152,67);
+   border-radius: 3px;
+   background: rgb(249, 152, 67);
+   width: 45px;
+   margin-right: 2px;
+   font-size: 8px;
+   height: 12px;
+ }
+ .g3{
+   padding: 1px;
+   border: 2px solid rgb(249,152,67);
+   border-radius:3px;
+   background: rgb(249, 152, 67);
+   width: 45px;
+   margin-right: 2px;
+   font-size: 8px;
+   height: 12px;
+ }
+ .g4{
+   padding: 1px;
+   border: 2px solid rgb(249,152,67);
+   border-radius: 3px;
+   background: rgb(249, 152, 67);
+   width: 45px;
+   margin-right: 2px;
+   font-size: 8px;
+   height: 12px;
+ }
+ .g5{
+   padding: 1px;
+   border: 2px solid rgb(249,152,67);
+   border-radius: 3px;
+   background: rgb(249, 152, 67);
+   width: 45px;
+   height: 12px;
+   margin-right: 2px;
+   font-size: 8px;
+ }
+ #graph0{
+   display: grid;
+ }
+ .chart{
+   width:90%;
+   height: 150px;
+   padding:5px;
+   justify-items: center;
+ }
+ 
+  
 }
