@@ -360,85 +360,39 @@ body {
 .graphique{
   grid-area:graphique ;
   text-align: center; 
-  border:2px solid #333; 
+  border:none; 
   width: 80%;  
   height: 400px;
-  background: linear-gradient(rgba(87, 87, 206, 0.474), rgba(14, 14, 42, 0.381), rgba(8, 8, 36, 0.496)); 
+  background: none;  
   padding: 20px;
  }
  .right{
-   display: flex;
-   justify-content:center;
-   margin-right: 5px;
+   display: grid;
+   justify-content:left;
+   grid-template: 45px 45px 45px/45px 45px 45px;
+   row-gap:5px;
+   column-gap: 60px;
    cursor: pointer;
    padding: 5px;
  }
- .g0{
-   padding: 1px;
-   border: 2px solid #333;
-   border-radius: 3px;
-   background: #0d111768;
-   width: 45px;
-   margin-right: 2px;
-   font-size: 8px;
-   height: 20px;
- }
+
  .g1{
-   padding: 1px;
+   padding: 10px; 
    border: 2px solid rgb(249,152,67);
-   border-radius: 3px;
-   background: rgb(249, 152, 67);
-   width: 45px;
-   margin-right: 2px;
-   font-size: 8px;
-   height: 12px;
+  border-radius: 3px;
+  background: rgb(249, 152, 67);
+  width: 65px;
+  font-size: 8px;
+  height: 10px;
  }
- .g2{
-   padding: 1px;
-   border: 2px solid rgb(249,152,67);
-   border-radius: 3px;
-   background: rgb(249, 152, 67);
-   width: 45px;
-   margin-right: 2px;
-   font-size: 8px;
-   height: 12px;
- }
- .g3{
-   padding: 1px;
-   border: 2px solid rgb(249,152,67);
-   border-radius:3px;
-   background: rgb(249, 152, 67);
-   width: 45px;
-   margin-right: 2px;
-   font-size: 8px;
-   height: 12px;
- }
- .g4{
-   padding: 1px;
-   border: 2px solid rgb(249,152,67);
-   border-radius: 3px;
-   background: rgb(249, 152, 67);
-   width: 45px;
-   margin-right: 2px;
-   font-size: 8px;
-   height: 12px;
- }
- .g5{
-   padding: 1px;
-   border: 2px solid rgb(249,152,67);
-   border-radius: 3px;
-   background: rgb(249, 152, 67);
-   width: 45px;
-   height: 12px;
-   margin-right: 2px;
-   font-size: 8px;
- }
+
+ 
  #graph0{
    display: grid;
  }
  .chart{
-   width:90%;
-   height: 150px;
+   width:auto;
+   height: 200px;
    padding:5px;
    justify-items: center;
  }

@@ -73,7 +73,7 @@ new Chart(ctx, {
     labels: ['Ce Mois','3 Mois', '6 Mois', '1 An','5 Ans'],
     datasets: [{
       label: '# de tués',
-      data: [12, 19, 3, 5, 2],
+      data: [12, 19, 25, 35, 42],
       borderWidth: 1,
       backgroundColor:[
         "crimson",
@@ -100,7 +100,7 @@ new Chart(ctxx, {
     labels: ['Ce Mois','3 Mois', '6 Mois', '1 An','5 Ans'],
     datasets: [{
       label: '# de kidnapés',
-      data: [6, 28, 10, 20, 32],
+      data: [6, 58, 10, 30, 62],
       borderWidth: 1,
       backgroundColor:[
         "green",
