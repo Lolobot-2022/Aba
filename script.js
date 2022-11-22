@@ -8,6 +8,10 @@ var divs = ["graph0","graph1", "graph2", "graph3", "graph4", "graph5"];
 var visibleId = null;
 const ctx = document.getElementById('myChart');
 const ctxx =document.getElementById('myChartOne');
+const line =document.getElementById('line');
+const lineone =document.getElementById('lineOne');
+
+
 
 
 
@@ -66,7 +70,7 @@ function hide() {
 
 //POUR LES GRAPHIQUES QUI VIENNENT DE CHART.JS
 
-//POUR LES TUES
+//BAR POUR LES TUES
 new Chart(ctx, {
   type: 'bar',
   data: {
@@ -93,7 +97,7 @@ new Chart(ctx, {
   }
 });
 
-//POUR LES KIDNAPES
+//BAR POUR LES KIDNAPES
 new Chart(ctxx, {
   type: 'bar',
   data: {
@@ -120,7 +124,79 @@ new Chart(ctxx, {
   }
 });
 
+//LINE POUR LES TUES
 
+new Chart(line,{
+  type:'line',
+  data: {
+    labels:["3 nov 22", "10 nov 22", "19 nov 22","30 nov 22"],
+    datasets:[{
+    label:'# de tués',
+    data:[5, 55, 15, 67],
+    fill:true,
+    backgroundColor:"red",
+    tension:0.1
+  }]
+},
+  options:{
+    elements:{
+      point:{
+        pointBorderColor:"lightgreen"
+      }
+    },
+    scales:{
+      y:{
+        ticks:{
+          color:"beige"
+        },
+        suggestedMin:50,
+        suggestedMax:100
+      },
+      x:{
+        ticks:{
+          color:"beige"
+        }
+      }
+    }
+  }
+ });
+
+ //POUR LES KIDNAPPES
+
+ new Chart(lineone,{
+  type:'line',
+  data: {
+    labels:["1 nov 22", "8 nov 22", "15 nov 22","26 nov 22", "29 nov 22"],
+    datasets:[{
+    label:'# de kidnapés',
+    data:[70, 5, 40, 17, 65],
+    fill:true,
+    backgroundColor:"purple",
+    tension:0.1
+  }]
+},
+  options:{
+    elements:{
+      point:{
+        pointBorderColor:"#333"
+      }
+    },
+    scales:{
+      y:{
+        ticks:{
+          color:"beige"
+        },
+        suggestedMin:50,
+        suggestedMax:100
+      },
+      x:{
+        ticks:{
+          color:"beige"
+        }
+      }
+    }
+  }
+ });
 
 
 

@@ -385,10 +385,21 @@ body {
   font-size: 8px;
   height: 10px;
  }
+ .g1:hover{
+  border:#333 solid 2px;
+  background: #0D1117;
+ }
+ .g1:active{
+  border:#333 solid 2px;
+  background: #0D1117;
+ }
 
  
  #graph0{
    display: grid;
+ }
+ #graph1{
+  display: grid;
  }
  .chart{
    width:auto;

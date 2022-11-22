@@ -73,12 +73,12 @@
 
     <div class="box graphique">
       <div class="right">
-        <span class="g1" onclick="show('graph0');">Vue d'ensemble</span> 
-        <span class="g1"  onclick="show('graph1');">Ce Mois</span>
-        <span class="g1" onclick="show('graph2');">3 Mois</span> 
-        <span class="g1"  onclick="show('graph3');">6 Mois</span>
-        <span class="g1"onclick="show('graph4');">1 ans</span>
-        <span class="g1" onclick="show('graph4');">5 ans</span>
+        <span  class="g1"  onclick="show('graph0');">Vue d'ensemble</span> 
+        <span  class="g1"  onclick="show('graph1');">Ce Mois</span>
+        <span  class="g1"  onclick="show('graph2');">3 Mois</span> 
+        <span  class="g1"  onclick="show('graph3');">6 Mois</span>
+        <span  class="g1"  onclick="show('graph4');">1 an</span>
+        <span  class="g1"  onclick="show('graph5');">5 ans</span>
      </div>
    <br>
      
@@ -92,8 +92,14 @@
          </div>
       </div>
 
-      <div id="graph1">
-        
+      <div id="graph1" style="display:none;">
+        <div class="chart">
+          <canvas id="line" aria-label="chart" role="img"></canvas>
+        </div>
+
+        <div class="chart">
+          <canvas id="lineOne" aria-label="chart" role="img"></canvas>
+        </div>
      </div>
    
      <div id="graph2" style="display: none;"></div>
@@ -102,7 +108,7 @@
      
    <div id="graph4" style="display: none;">lodfgddffffffffffffffffff</div>
 
-   <div id="graph1">
+   <div id="graph5">
       
   </div>
 
