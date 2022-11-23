@@ -10,6 +10,8 @@ const ctx = document.getElementById('myChart');
 const ctxx =document.getElementById('myChartOne');
 const line =document.getElementById('line');
 const lineone =document.getElementById('lineOne');
+const lineTrois =document.getElementById('lineTrois');
+const lineTroisBis =document.getElementById('lineTroisBis');
 
 
 
@@ -124,7 +126,7 @@ new Chart(ctxx, {
   }
 });
 
-//LINE POUR LES TUES
+//LINE POUR LES TUES 1 MOIS
 
 new Chart(line,{
   type:'line',
@@ -197,6 +199,84 @@ new Chart(line,{
     }
   }
  });
+
+
+
+//LINE POUR LES TUES 3 MOIS
+
+new Chart(lineTrois,{
+  type:'line',
+  data: {
+    labels:["3 nov 22", "10 nov 22", "19 nov 22","30 nov 22"],
+    datasets:[{
+    label:'# de tués',
+    data:[5, 55, 15, 67],
+    fill:true,
+    backgroundColor:"yellow",
+    tension:0.1
+  }]
+},
+  options:{
+    elements:{
+      point:{
+        pointBorderColor:"red"
+      }
+    },
+    scales:{
+      y:{
+        ticks:{
+          color:"beige"
+        },
+        suggestedMin:50,
+        suggestedMax:100
+      },
+      x:{
+        ticks:{
+          color:"beige"
+        }
+      }
+    }
+  }
+ });
+
+ //POUR LES KIDNAPPES
+
+ new Chart(lineTroisBis,{
+  type:'line',
+  data: {
+    labels:["1 nov 22", "8 nov 22", "15 nov 22","26 nov 22", "29 nov 22"],
+    datasets:[{
+    label:'# de kidnapés',
+    data:[70, 5, 40, 17, 65],
+    fill:true,
+    backgroundColor:"grey",
+    tension:0.1
+  }]
+},
+  options:{
+    elements:{
+      point:{
+        pointBorderColor:"#333"
+      }
+    },
+    scales:{
+      y:{
+        ticks:{
+          color:"beige"
+        },
+        suggestedMin:50,
+        suggestedMax:100
+      },
+      x:{
+        ticks:{
+          color:"beige"
+        }
+      }
+    }
+  }
+ });
+
+
 
 
 

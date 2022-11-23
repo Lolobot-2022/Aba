@@ -405,6 +405,10 @@ body {
  #graph1{
   display: grid;
  }
+ #graph2{
+  display: grid;
+ }
+
  .chart{
    width:auto;
    height: 200px;
