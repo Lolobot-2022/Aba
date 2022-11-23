@@ -193,7 +193,11 @@ body {
 .light .alpha{ 
   color: rgb(255, 180, 99);
 }
-
+.anonce-fille{
+  width:80px ;
+  float:left;
+  filter: brightness(110%);
+}
 
 #objectif{
   font-size: 25px;
