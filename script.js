@@ -6,13 +6,12 @@ let upto=4900;
 let uptoOne=1;
 var divs = ["graph0","graph1", "graph2", "graph3", "graph4", "graph5"];
 var visibleId = null;
+var divsQuestion = ["reponse0","reponse1", "reponse2", "reponse3", "reponse4", "reponse5"];
+var visibleQuestId=null;
 const ctx = document.getElementById('myChart');
 const continent =document.getElementById('forContinent');
 const ctxx =document.getElementById('myChartOne');
-const line =document.getElementById('line');
-const lineone =document.getElementById('lineOne');
-// const lineTrois =document.getElementById('lineTrois');
-// const lineTroisBis =document.getElementById('lineTroisBis');
+
 
 
 
@@ -56,6 +55,8 @@ function show(id) {
   if(visibleId !== id) {
     visibleId = id;
   } 
+
+  
   hide();
 }
 function hide() {
@@ -69,6 +70,7 @@ function hide() {
       div.style.display = "none";
     }
   }
+  
 }  
 
 //POUR LES GRAPHIQUES QUI VIENNENT DE CHART.JS
@@ -136,7 +138,7 @@ new Chart(continent, {
         "yellow",
         "purple",
         "brown",
-        "indigo"
+        "crimson"
       ]
     }]
   },
@@ -169,17 +171,23 @@ new Chart(continent, {
 new Chart(ctxx, {
   type: 'bar',
   data: {
-    labels: ['Ce Mois','3 Mois', '6 Mois', '1 An','5 Ans'],
+    labels: ['France','Canada', 'Turquie', 'Etats-Unis','Bresil','Cuba','Chili','Allemagne','Russie','Italie','Royaume-Uni'],
     datasets: [{
-      label: '# étudiants inscrits sur Elitis',
-      data: [3, 0, 0, 0, 0],
+      label: '# étudiants inscrits sur Elitis par pays',
+      data: [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       borderWidth: 1,
       backgroundColor:[
         "green",
         "lightblue",
         "lightyellow",
         "pink", 
-        "red"
+        "red", 
+        "fuschia",
+        "magenta",
+        "goldenrod",
+        "cream",
+        "forest",
+        "ochre"
       ]
     }]
   },
@@ -205,80 +213,44 @@ new Chart(ctxx, {
   }
 });
 
-//LINE POUR LES TUES 1 MOIS
+//LINE POUR LES inscrits ce MOIS
 
-new Chart(line,{
-  type:'line',
-  data: {
-    labels:["3 nov 22", "10 nov 22", "19 nov 22","30 nov 22"],
-    datasets:[{
-    label:'# de tués',
-    data:[5, 55, 15, 67],
-    fill:true,
-    backgroundColor:"red",
-    tension:0.1
-  }]
-},
-  options:{
-    elements:{
-      point:{
-        pointBorderColor:"lightgreen"
-      }
-    },
-    scales:{
-      y:{
-        ticks:{
-          color:"beige"
-        },
-        suggestedMin:50,
-        suggestedMax:100
-      },
-      x:{
-        ticks:{
-          color:"beige"
-        }
-      }
-    }
-  }
- });
+// new Chart(line,{
+//   type:'line',
+//   data: {
+//     labels:["3 nov 22", "10 nov 22", "19 nov 22","30 nov 22"],
+//     datasets:[{
+//     label:'# inscrits',
+//     data:[5, 55, 15, 67],
+//     fill:true,
+//     backgroundColor:"red",
+//     tension:0.1
+//   }]
+// },
+//   options:{
+//     elements:{
+//       point:{
+//         pointBorderColor:"lightgreen"
+//       }
+//     },
+//     scales:{
+//       y:{
+//         ticks:{
+//           color:"beige"
+//         },
+//         suggestedMin:50,
+//         suggestedMax:100
+//       },
+//       x:{
+//         ticks:{
+//           color:"beige"
+//         }
+//       }
+//     }
+//   }
+//  });
 
- //POUR LES KIDNAPPES
-
- new Chart(lineone,{
-  type:'line',
-  data: {
-    labels:["1 nov 22", "8 nov 22", "15 nov 22","26 nov 22", "29 nov 22"],
-    datasets:[{
-    label:'# de kidnapés',
-    data:[70, 5, 40, 17, 65],
-    fill:true,
-    backgroundColor:"purple",
-    tension:0.1
-  }]
-},
-  options:{
-    elements:{
-      point:{
-        pointBorderColor:"#333"
-      }
-    },
-    scales:{
-      y:{
-        ticks:{
-          color:"beige"
-        },
-        suggestedMin:50,
-        suggestedMax:100
-      },
-      x:{
-        ticks:{
-          color:"beige"
-        }
-      }
-    }
-  }
- });
-
+ 
 
 
 //LINE POUR LES TUES 3 MOIS
