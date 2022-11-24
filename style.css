@@ -366,7 +366,7 @@ body {
   text-align: center; 
   border:none; 
   width: 80%;  
-  height: 400px;
+  height: 600px;
   background: none;  
   padding: 20px;
  }
@@ -405,9 +405,9 @@ body {
  #graph1{
   display: grid;
  }
- #graph2{
+ /* #graph2{
   display: grid;
- }
+ } */
 
  .chart{
    width:auto;
