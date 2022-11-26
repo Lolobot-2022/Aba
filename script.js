@@ -171,10 +171,10 @@ new Chart(continent, {
 new Chart(ctxx, {
   type: 'bar',
   data: {
-    labels: ['France','Canada', 'Turquie', 'Etats-Unis','Bresil','Cuba','Chili','Allemagne','Russie','Italie','Royaume-Uni'],
+    labels: ['France','Canada', 'Turquie', 'Etats-Unis','Haiti','Bresil','Cuba','Chili','Allemagne','Rep.Dominicaine','Russie','Italie','Royaume-Uni'],
     datasets: [{
       label: '# étudiants inscrits sur Elitis par pays',
-      data: [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      data: [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       borderWidth: 1,
       backgroundColor:[
         "green",
@@ -187,7 +187,9 @@ new Chart(ctxx, {
         "goldenrod",
         "cream",
         "forest",
-        "ochre"
+        "ochre",
+        "red",
+        "blue"
       ]
     }]
   },
