@@ -38,10 +38,10 @@ body {
 .label .ball {
   background: #1abc9c;
   border-radius: 50%;
-  height: 17px;
-  width: 17px;
+  height: 19px;
+  width: 19px;
   position: absolute;
-  top: 5px;
+  top: 3px;
   left: 3px;
   transform: translateX(29px);
 }
@@ -69,12 +69,21 @@ body {
 }
 
 /*Pour le translater en creole haitien */
-.language {
+.statistiques {
   /*la class qui contient le bi-translate */
   position: absolute;
   left: 2rem;
   top: 2rem;
+  color: rgb(249, 152, 67);
 }
+ .stat{
+  color: rgb(249, 152, 67);
+  font-weight: bold;
+ }
+ .statOne{
+  color: rgb(249, 152, 67);
+  font-weight: bold;
+ }
 
 .bi-translate {
   height: 20px;
@@ -123,7 +132,10 @@ body {
   gap: 20px;
   grid-template-areas:
     "header header header header"
-    "main main mainOne mainOne"
+    "main main mainZero mainZero"
+    "mainOne mainOne mainOne mainOne"
+    "mainTwo mainTwo mainTwo mainTwo"
+    "mainThree mainThree mainThree mainThree"
     "info info info info"
     "graphique graphique graphique graphique";
   justify-items: center;
@@ -156,6 +168,31 @@ body {
 }
 .mainOne {
   grid-area: mainOne;
+  text-align: center;
+  width: 500px;
+  margin-left: 10px;
+  background: #1abc9c22;
+  padding: 20px;
+}
+
+.mainZero{
+  grid-area: mainZero;
+  text-align: center;
+  width: 500px;
+  margin-left: 10px;
+  background: #1abc9c22;
+  padding: 20px;
+}
+.mainTwo{
+  grid-area: mainZero;
+  text-align: center;
+  width: 500px;
+  margin-left: 10px;
+  background: #1abc9c22;
+  padding: 20px;
+}
+.mainThree{
+  grid-area: mainZero;
   text-align: center;
   width: 500px;
   margin-left: 10px;
@@ -301,7 +338,10 @@ body {
     grid-template-areas:
       "header header header header"
       "main main main main"
+      "mainZero mainZero mainZero mainZero"
       "mainOne mainOne mainOne mainOne"
+      "mainTwo mainTwo mainTwo mainTwo"
+      "mainThree mainThree mainThree mainThree"
       "info info info info"
       "graphique graphique graphique graphique";
     justify-items: center;
@@ -333,7 +373,34 @@ body {
     width: 80%;
     background: #1abc9c;
   }
+  .mainZero {
+    grid-area: mainZero;
+    text-align: center;
+    width: 80%;
+    background: #1abc9c;
+  }
+  .mainTwo {
+    grid-area: mainTwo;
+    text-align: center;
+    width: 80%;
+    background: #1abc9c;
+  }
+  .mainThree {
+    grid-area: mainThree;
+    text-align: center;
+    width: 80%;
+    background: #1abc9c;
+  }
   .light .mainOne {
+    background: #0d111750;
+  }
+  .light .mainZero {
+    background: #0d111750;
+  }
+  .light .mainTwo {
+    background: #0d111750;
+  }
+  .light .mainThree {
     background: #0d111750;
   }
   .num {

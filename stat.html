@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <title>Publier sur Elitis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+  <style>
+    button {
+      display: block;
+      text-align: left;
+      background: #1abc9c;
+      color: white;
+      width: 100%;
+      margin-top: 5px;
+    }
+    h1 {
+      font-size: medium;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    h2 {
+      font-size: medium;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .passer{
+        border: 1px solid #1ABC9C;
+        border-radius: 10px;
+        padding: 20px;
+        width:50%;
+        height: 20px;
+        font-size: 15px;
+        background: #1ABC9C;
+        color: white;
+        text-align: center;
+     
+        
+    }
+
+    a{
+        text-decoration: none;
+    }
+   
+    .publier{
+      border: 1px solid #1ABC9C;
+        border-radius: 10px;
+        padding: 20px;
+        width:50%;
+        height: 20px;
+        font-size: 15px;
+        background: #1ABC9C;
+        color: white;
+        text-align: center;
+        
+        
+    }
+    #Demo1{
+        height: 200px;
+    }
+   
+   
+  </style>
+  <body>
+    <div class="w3-container w3-animate-zoom">
+        <h1>Devenez membre collaborateur pour publier</h1>
+
+      <p class="c1">
+       Pour publier sur Elitis, vous devez devenir membre collaborateur. Vous pourrez ainsi publier vos annonces, bourses d'étude, comptes-rendus,
+       mémoires, podcats pour motiver les autres membres de la communauté Elitis et autres sujets.
+      </p>
+
+      <button onclick="myFunction('Demo1')">Si vous êtes déjà membre collaborateur</button>
+
+      <div id="Demo1" class="w3-hide w3-container w3-animate-zoom">
+        <p class="c1">  
+                Connectez-vous avec votre e-mail et votre mot de passe de membre collaborateur créé à
+                 partir du lien d'invitation que vous avez reçu par mail. 
+            
+        </p> <br>
+
+        <a href="https://goodbarber.com/login"><span class="passer">Cliquer pour vous connecter</span> </a></br>
+
+     
+      </div>
+
+      <button onclick="myFunction('Demo2')">Si vous n'êtes pas encore membre collaborateur</button>
+
+      <div id="Demo2" class="w3-hide w3-container w3-animate-zoom">
+        <p class="c1">   
+            Vous aurez accès aux sections: Annonces pour pouvoir poster des annonces, podcasts, publications. Ces sections vous permettront de publier vos propres contenus. 
+            Evitez de modifier les contenus des autres utilisateurs par risque de vous voir perdre votre droit à la contribution. 
+     
+         </p> </br>
+         
+         <a href="https://abakoripsyon2.goodbarber.app/collaboration"><span class="publier">Devenez-en en cliquant ici!</span> </a>
+      </div> <br> <br> <br>
+    </div>
+    
+
+    <script>
+      function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+

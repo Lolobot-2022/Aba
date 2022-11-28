@@ -2,8 +2,14 @@ const lightMode = document.getElementById('light-mode');
 window.onscroll = function() {myFunctionOne()};
 let counts=setInterval(updated);
 let countsone=setInterval(updatedOne);
+let countsTwo=setInterval(updatedTwo);
+let countsThree=setInterval(updatedThree);
+let countsFour=setInterval(updatedFour);
 let upto=4900;
-let uptoOne=1;
+let uptoOne=149600;
+let uptoTwo=1;
+let uptoThree=878390;
+let uptoFour=1;
 var divs = ["graph0","graph1", "graph2", "graph3", "graph4", "graph5"];
 var visibleId = null;
 var divsQuestion = ["reponse0","reponse1", "reponse2", "reponse3", "reponse4", "reponse5"];
@@ -34,11 +40,37 @@ function updated (){
 }
 
 function updatedOne (){
-  var count2 =document.getElementById("numb2");
-  count2.innerHTML=++uptoOne;
-  if (uptoOne===3)
+  var count1 =document.getElementById("numb1");
+  count1.innerHTML=++uptoOne;
+  if (uptoOne===150000)
   {
     clearInterval(countsone);
+  }
+}
+
+function updatedTwo (){
+  var count2 =document.getElementById("numb2");
+  count2.innerHTML=++uptoTwo;
+  if (uptoTwo===3)
+  {
+    clearInterval(countsTwo);
+  }
+}
+
+function updatedThree (){
+  var count3 =document.getElementById("numb3");
+  count3.innerHTML=++uptoThree;
+  if (uptoThree===878421)
+  {
+    clearInterval(countsThree);
+  }
+}
+function updatedFour (){
+  var count4 =document.getElementById("numb4");
+  count4.innerHTML=++uptoFour;
+  if (uptoFour===2)
+  {
+    clearInterval(countsFour);
   }
 }
 
@@ -79,10 +111,10 @@ function hide() {
 new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['France','Canada', 'Turquie', 'Etats-Unis','Bresil','Cuba','Chili','Allemagne','Russie','Italie','Royaume-Uni'],
+    labels: ['France','Canada','Haiti', 'Turquie', 'USA','Bresil','Cuba','Chili','Allemagne','Rep.Dom','Russie','Italie','RU'],
     datasets: [{
-      label: '# étudiants haitiens par pays',
-      data: [1685, 453, 51, 1066, 992, 131, 544, 19, 31, 74, 14],
+      label: '# étudiants universitaires haitiens par pays',
+      data: [1685, 453, 150000, 51, 1066, 992, 131, 544, 19, 40000, 31, 74, 14],
       borderWidth: 1,
       backgroundColor:[
         "crimson",
@@ -95,7 +127,9 @@ new Chart(ctx, {
         "yellow",
         "purple",
         "brown",
-        "tan"
+        "tan",
+        "orange",
+        "gold"
       ]
     }]
   },
@@ -103,7 +137,7 @@ new Chart(ctx, {
     scales: {
       y: {
         beginAtZero: true,
-        suggestedMax:100,
+        suggestedMax:150,
         ticks:{
           font: {
             size:10
@@ -114,7 +148,7 @@ new Chart(ctx, {
       x:{
         ticks:{
           font:{
-            size:10
+            size:8
           }
           
         }
@@ -130,8 +164,8 @@ new Chart(continent, {
   data: {
     labels: ['Europe','Amérique', 'Asie', 'Afrique','Océanie'],
     datasets: [{
-      label: '# étudiants haitiens par continent',
-      data: [1786, 3186, 0, 0, 0],
+      label: '# étudiants haitiens universitaires par continent',
+      data: [1786, 190000, 0, 0, 0],
       borderWidth: 1,
       backgroundColor:[
         "whitesmoke",
@@ -157,7 +191,7 @@ new Chart(continent, {
       x:{
         ticks:{
           font:{
-            size:10
+            size:8
           }
           
         }
@@ -171,7 +205,7 @@ new Chart(continent, {
 new Chart(ctxx, {
   type: 'bar',
   data: {
-    labels: ['France','Canada', 'Turquie', 'Etats-Unis','Haiti','Bresil','Cuba','Chili','Allemagne','Rep.Dominicaine','Russie','Italie','Royaume-Uni'],
+    labels: ['France','Canada', 'Turquie', 'USA','Haiti','Bresil','Cuba','Chili','Allemagne','Rep.Dom','Russie','Italie','RU'],
     datasets: [{
       label: '# étudiants inscrits sur Elitis par pays',
       data: [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -207,7 +241,7 @@ new Chart(ctxx, {
       x:{
         ticks:{
           font:{
-            size:10
+            size:8
           }
         }
       }
