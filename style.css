@@ -319,6 +319,7 @@ body {
 }
 
 /*Format Mobile */
+
 @media only screen and (max-width: 767px) {
   .connection {
     display: flex;
@@ -495,3 +496,6 @@ body {
     justify-items: center;
   }
 }
+
+
+

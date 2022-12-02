@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="acceuil.css" />
+    <title>Acceuil</title>
+  </head>
+
+  <body>
+    <div class="w3-container w3-animate-zoom" style="margin-top: 10%">
+      <div class="content">
+        <h2>Publications</h2>
+        <h2>Publications</h2>
+      </div>
+
+      <div class="nombre">
+        <div class="num" id="numb"></div> 
+        <p>articles dont (mémoires licences, masters, thèses, etc...)</p> 
+      </div>
+
+      <div class="lien">
+        <a
+          href="https://abakoripsyon2.goodbarber.app/comptes-rendus"
+          class="btn"
+          >Comptes-rendus</a
+        >
+        <a href="https://abakoripsyon2.goodbarber.app/theses" class="btn"
+          >Thèses</a
+        >
+        <a
+          href="https://abakoripsyon2.goodbarber.app/memoires-de-licence"
+          class="btn"
+          >Mémoires licences</a
+        >
+        <a
+          href="https://abakoripsyon2.goodbarber.app/memoires-de-masters"
+          class="btn"
+          >Mémoires masters</a
+        >
+        <a
+          href="https://abakoripsyon2.goodbarber.app/bourses-detudes"
+          class="btn"
+          >Bourses d'études</a
+        >
+        <a
+          href="https://abakoripsyon2.goodbarber.app/etudier-letranger"
+          class="btn"
+          >Etudier à l'étranger</a
+        >
+        <a href="https://abakoripsyon2.goodbarber.app/essais" class="btn"
+          >Essais</a
+        >
+      </div>
+    </div>
+
+    <script>
+      let counts = setInterval(updated);
+      let upto = 5;
+
+      function updated() {
+        var count = document.getElementById("numb");
+        count.innerHTML = ++upto;
+        if (upto === 100) {
+          clearInterval(counts);
+        }
+      }
+    </script>
+  </body>
+</html>

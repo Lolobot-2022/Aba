@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>html home goodbarber</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+
+body{
+  background-color: #1ABC9C;
+}
+.mySlides {display:none;height:300px;margin-top:0;filter:contrast(120%);}
+
+.lien{
+    display: grid;
+    grid-template:1fr 1fr 1fr/1fr 1fr 1fr;
+    gap:10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin:0 5px 0 5px;
+    
+}
+.btn{
+    width: 100%;
+    height: 30px;
+    background: #1ABC9C;
+    border: 2px white solid;
+    box-shadow: 3px 3px red, 1em 0 .4em grey;
+    border-radius: 20px;
+    padding: 7px;
+    font-size: 9px;
+    text-align: center;
+    color: white;
+}
+
+.btn::hover{
+  background: #1ABC9C;
+}
+.btn::active{background: #1ABC9C;}
+
+.titre{
+  font-size: 25px;
+  text-align: center;
+  color: #1ABC9C;
+  font-weight: bolder;
+  /* margin-bottom: 100px;  */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 200px;
+  align-items: center;
+}
+
+.affiche{
+  transform: translateY(-90%);
+}
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<div>
+
+
+
+<div class="w3-content w3-section" style="max-width:500px">
+   
+<img src="https://i.goopics.net/8hhokb.png" alt="Image"class="mySlides"style="width:100%"/>
+<img src="https://i.goopics.net/5dq6w2.png" alt="Image"class="mySlides"style="width:100%"/>
+<img src="https://i.goopics.net/qrxoyf.png" alt="Image"class="mySlides"style="width:100%"/>
+<img src="https://i.goopics.net/oexb3p.png" alt="Image"class="mySlides"style="width:100%"/>
+<img src="https://i.goopics.net/ah5an1.png" alt="Image"class="mySlides"style="width:100%"/>
+
+
+</div>
+
+</div>
+
+<div class="affiche">
+
+  
+  <!-- <h1 class="titre">Communauté Elitis</h1> -->
+  <img src="https://i.goopics.net/6nypcx.png" alt="Image"class="titre"/>
+ 
+
+
+  <div class="lien">
+     
+      <a href="https://abakoripsyon2.goodbarber.app/comptes-rendus"class="btn">Comptes-rendus</a>
+      <a href="https://abakoripsyon2.goodbarber.app/memoires-de-licence"class="btn">Mémoires licences</a>
+      <a href="https://abakoripsyon2.goodbarber.app/memoires-de-masters"class="btn">Mémoires masters</a>
+      <a href="https://abakoripsyon2.goodbarber.app/bourses-detudes"class="btn">Bourses d'études</a>
+      <a href="https://abakoripsyon2.goodbarber.app/etudier-letranger"class="btn">Etudier à l'étranger</a>
+      <a href="https://abakoripsyon2.goodbarber.app/essais"class="btn">Essais</a>
+  
+  </div>
+
+
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
