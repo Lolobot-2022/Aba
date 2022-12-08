@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<html>
+  <title>Publier sur Elitis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-    <title>Conditions</title>
+  <style>
+    button {
+      display: block;
+      text-align: left;
+      background: #1abc9c;
+      color: white;
+      width: 100%;
+      margin-top: 20px;
+    }
+    h1 {
+      font-size: medium;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      color: #1ABC9C;
+    }
+    h2 {
+      font-size: medium;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
 
-    <style>
-     body {
-  background: white;
-  margin: 0;
-  font-family: "Dosis", sans-serif;
-  width: 100%;
-  height: 100vh;
-}
-
-.passer{
+    .passer{
         border: 1px solid #1ABC9C;
         border-radius: 10px;
         padding: 20px;
@@ -48,47 +58,64 @@
         
         
     }
-   
-    h2 {font-size: medium; font-weight: bold;text-transform: uppercase;}
-    h1{font-size: large; font-weight: bold;text-transform: uppercase;}
-    .c1{ font-size: small;}
-
-    div{
-        display: grid;
-        gap:10px;
-        text-align: center;
-        justify-items: center;
-        margin-top: 20%;
+    #Demo1{
+        height: 200px;
     }
-
-      
-    </style>
-  </head>
+    .c1{
+      background: rgb(245, 245, 245);
+    border: #1abc9c5a 1px solid;
+    padding: 10px;
+    border-radius: 20px;
+    }
+   
+   
+  </style>
   <body>
-   <div class="w3-animate-zoom">
+    <div class="w3-container w3-animate-zoom">
+        <h1>Devenez membre collaborateur pour publier</h1>
 
-    <h1>Devenez membre collaborateur pour publier</h1>
-   
-    <h2>Si vous êtes déjà membre collaborateur</h2></br>
-    <a href="https://goodbarber.com/login"><span class="passer">Cliquer pour vous connecter</span> </a></br>
-   
+      <p class="c1">
+       Pour publier sur Elitis, vous devez devenir membre collaborateur. Vous pourrez ainsi publier sous votre nom ou de façon anonyme vos articles, bourses d'étude, comptes-rendus,
+       mémoires de master 1, mémoire de master 2, thèses et des podcasts pour motiver les autres membres de la communauté Elitis.
+      </p>
 
-    <p class="c1">   
-        Connectez-vous avec votre e-mail et votre mot de passe de membre collaborateur créé à
-         partir du lien d'invitation que vous avez reçu par mail. 
- 
-     </p>
-    <h2>Si vous n'êtes pas encore membre collaborateur</h2>
+      <button onclick="myFunction('Demo1')">Si vous êtes déjà membre collaborateur</button>
+
+      <div id="Demo1" class="w3-hide w3-container w3-animate-zoom">
+        <p class="c1">  
+                Connectez-vous avec votre e-mail et votre mot de passe de membre collaborateur créé à
+                 partir du lien d'invitation que vous avez reçu par mail. 
+            
+        </p> <br>
+
+        <a href="https://goodbarber.com/login"><span class="passer">Cliquer pour vous connecter</span> </a></br>
+
      
-     <p class="c1">   
-       Vous aurez accès aux sections: Annonces pour pouvoir poster des annonces, podcasts, publications. Ces sections vous permettront de publier vos propres contenus. 
-       Evitez de modifier les contenus des autres utilisateurs par risque de vous voir perdre votre droit à la contribution. 
+      </div>
 
-    </p> </br>
-    
-    <a href="https://abakoripsyon2.goodbarber.app/collaboration"><span class="publier">Devenez-en en cliquant ici!</span> </a>
+      <button onclick="myFunction('Demo2')">Si vous n'êtes pas encore membre collaborateur</button>
 
+      <div id="Demo2" class="w3-hide w3-container w3-animate-zoom">
+        <p class="c1">   
+            Vous aurez accès aux sections: bourses d'études, mémoires de master 1, mémoire de master 2, thèses, étudier à l'étranger, podcasts. Ces sections vous permettront de publier vos propres contenus. 
+            Evitez de modifier les contenus des autres utilisateurs par risque de vous voir perdre votre droit à la contribution. 
+     
+         </p> </br>
+         
+         <a href="https://abakoripsyon2.goodbarber.app/collaboration"><span class="publier">Devenez-en en cliquant ici!</span> </a>
+      </div> <br> <br> <br>
     </div>
+    
 
+    <script>
+      function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
   </body>
 </html>

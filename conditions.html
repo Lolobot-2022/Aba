@@ -1,73 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conditions</title>
+<html>
+  <title>Maitriser elitis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-    <style>
-     body {
-  background: white;
-  margin: 0;
-  font-family: "Dosis", sans-serif;
-  width: 100%;
-  height: 100vh;
-}
+  <style>
 
-.passer{
-        border: 1px solid #1ABC9C;
-        border-radius: 10px;
-        padding: 20px;
-        width:80%;
-        height: 20px;
-        font-size: 15px;
-        background: #1ABC9C;
-        color: white;
-        text-align: center;
-        margin:auto;
-        display: flex;
+button {
+      display: block;
+      text-align: left;
+      background: #1abc9c;
+      color: white;
+      width: 100%;
+      margin-top: 20px;
+    }
+    h1 {
+      font-size: medium;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      color: #1ABC9C;
     }
 
-    a{
-        text-decoration: none;
+    p{
+      background: rgb(245, 245, 245);
+    border: #1abc9c 1px solid;
+    padding: 10px;
+    border-radius: 20px;
     }
-    img{
-        width:100%;
-        height: 250px;}
-    .publier{
-      border: 1px solid #1ABC9C;
-        border-radius: 10px;
-        padding: 20px;
-        width:80%;
-        height: 20px;
-        font-size: 15px;
-        background: #1ABC9C;
-        color: white;
-        text-align: center;
-        margin:auto;
-        display: flex;
-    }
-    h2{margin-left:15px; font-size: medium; font-weight: bold;text-transform: uppercase;}
-    h1{margin-left: 15px;font-size: large; font-weight: bold;text-transform: uppercase;}
-    .c1{margin-left: 15px; font-size: small;}
-
-      
-    </style>
-  </head>
+  </style>
   <body>
-    <h1>Conditions à respecter pour une bonne annonce</h1>
-    <a href="https://abakoripsyon2.goodbarber.app/publier-une-annonce"><span class="passer">Passer si vous avez déjà lu les conditions</span> </a>
-   
-    <h2>PREMIERE CONDITION :</h2>
-    <p class="c1">     
-       - Toujours mettre votre nom, prénom et titre de votre annonce dans tous vos posts avant d'écrire le post en dessous, que ce soit post photo, video ou texte. ça facilite le traitement de votre annonce. 
+    <div class="w3-container w3-animate-zoom">
+      <h1>Comment maitriser Elitis ?</h1>
+      <p>
+       Nous avons sélectionné pour vous quelques questions que vous pourriez vous poser à propos de la plate-forme Elitis.
+       Nous vous apportons toutes les réponses à ces questions. Veuillez cliquer à chaque fois sur une question
+       pour trouver la réponse. Nous espérons que vous arriverez dans un laps de temps à bien maitriser Elitis.
 
-      Voici un exemple d'un post texte: </p>
-    <img src="https://i.goopics.net/b6deci.jpg" />
-    <h2>DEUXIEME CONDITION :</h2>
-    <p class="c1">  - Evitez de publier des obcenités pour ne pas choquer les autres membres. Vous pouvez publier que des annonces qui auront une valeur ajoutée les autres. Si vous entreprenez, vous pouvez aussi publier vos produits. </p>
-    <a href="https://abakoripsyon2.goodbarber.app/publier-une-annonce"><span class="publier">Publier votre annonce</span> </a>
+       Bonne aventure!
+      </p>
 
+      <button
+        onclick="myFunction('Demo1')"
+        
+      >
+        Quid Elits
+      </button>
+
+      <div id="Demo1" class="w3-hide w3-container w3-animate-zoom">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <button
+        onclick="myFunction('Demo2')"
+        
+      >
+        comment fonctionne Elitis?
+      </button>
+
+      <div id="Demo2" class="w3-hide w3-container w3-animate-zoom">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <button
+        onclick="myFunction('Demo3')"
+        
+      >
+        Quelle est la mission de Elitis?
+      </button>
+
+      <div id="Demo3" class="w3-hide w3-container w3-animate-zoom">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <button
+        onclick="myFunction('Demo4')"
+        
+      >
+        Comment bien profiter de Elitis?
+      </button>
+
+      <div id="Demo4" class="w3-hide w3-container w3-animate-zoom">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <button
+        onclick="myFunction('Demo5')"
+        
+      >
+        Pourquoi Elitis?
+      </button>
+
+      <div id="Demo5" class="w3-hide w3-container w3-animate-zoom">
+        <p>Lorem ipsum...</p>
+      </div>
+    </div>
+
+    <script>
+      function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
   </body>
 </html>
+
